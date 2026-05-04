@@ -1,0 +1,20 @@
+[package]
+name = "libneomagicphysx"
+version = "1.0.0"
+edition = "2021"
+
+[lib]
+name = "neomagicphysx"
+crate-type = ["cdylib"]
+
+[dependencies]
+#physx-sys = "0.11.1"
+physx-sys = { path = "../../../neophysx-rs/physx-sys" }
+# The PhysX API exposes several enums used as flags
+bitflags = "1.3"
+
+[dev-dependencies]
+regex = "1.7.3"
+
+[build-dependencies]
+csbindgen = "1.7.3"
